@@ -4,7 +4,21 @@
       <el-row name="myrow" :gutter="0">
         <el-col :xs="24"  :sm="24" :md="24" :ls="24" v-for="item in list" :key="item.id">
           <el-card class="list-row">
-            <img v-lazy="item.cover" :data-srcset="item.cover">
+            <!--<img v-lazy="item.cover" :data-srcset="item.cover">-->
+            <video
+                id="video1"
+                :src="item.path"
+                preload="auto" controls :poster="item.cover"
+                webkit-playsinline
+                playsinline="true"
+
+                x-webkit-airplay="allow"
+                x5-video-player-type="h5"
+                x5-video-player-fullscreen="true"
+                x5-video-orientation="portraint"
+                style="object-fit:fill">
+
+            </video>
             <span class="moviename">{{item.name}}</span>
             <div class="subtitle">
               <span>{{item.likenum}}次播放</span>
@@ -104,11 +118,11 @@
 
 <style lang="scss">
   .lists{
-    margin-top:40px;
+
   }
  .list-row{
    position: relative;
-   img{
+   img,video{
       width: 100%;
       max-height: 170px;
     }
