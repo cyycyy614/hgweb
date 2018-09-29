@@ -55,12 +55,40 @@ function getfindmovielist_get(opts) {
     opts: opts
   });
 }
+/** 列表数据 */
+function getChannelData_get(opts) {
+  return instance({
+    method: 'get',
+    url:  '/getChannelData',
+    opts: opts
+  });
+}
+/** 列表数据 */
+function getUserIndexData_get(opts) {
+  return instance({
+    method: 'get',
+    url:  '/getUserIndexData',
+    opts: opts
+  });
+}
+
+function getMovieCategoryList_get(opts) {
+  return instance({
+    method: 'get',
+    url:  '/getMovieCategoryList',
+    opts: opts
+  });
+}
+
 
 export {
-  swagger_get,
-  proxy_get,
-  mock_get,
-  query_get,
-  restful_id_list_get,
-    getfindmovielist_get
+    swagger_get,
+    proxy_get,
+    mock_get,
+    query_get,
+    restful_id_list_get,
+    getfindmovielist_get,
+    getChannelData_get,
+    getUserIndexData_get,
+    getMovieCategoryList_get
 };

@@ -5,6 +5,9 @@ import index from '@/views/list/index'
 import wel from '@/views/list/wel'
 import iso from '@/views/list/iso'
 import findlist from '@/views/list/findlist'
+import channel from '@/views/list/channel'
+import user from '@/views/user/index'
+import movielist from '@/views/list/movielist'
 
 Vue.use(Router)
 
@@ -36,6 +39,21 @@ export default new Router({
       path: '/findlist',
       name: 'findlist',
       component: findlist
+    },
+    {
+      path: '/channel',
+      name: 'channel',
+      component: channel
+    },
+    {
+      path: '/user',
+      name: 'user',
+      component: user
+    },
+    {
+      path: '/movielist',
+      name: 'movielist',
+      component: movielist
     }
   ]
 })
