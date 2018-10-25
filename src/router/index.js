@@ -8,6 +8,8 @@ import findlist from '@/views/list/findlist'
 import channel from '@/views/list/channel'
 import user from '@/views/user/index'
 import movielist from '@/views/list/movielist'
+import xieyi from '@/views/user/xieyi'
+import notice from '@/views/user/notice'
 
 Vue.use(Router)
 
@@ -54,6 +56,16 @@ export default new Router({
       path: '/movielist',
       name: 'movielist',
       component: movielist
+    },
+    {
+      path: '/xieyi',
+      name: 'xieyi',
+      component: xieyi
+    },
+    {
+      path: '/notice',
+      name: 'notice',
+      component: notice
     }
   ]
 })

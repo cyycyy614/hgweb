@@ -1,7 +1,7 @@
 <template>
   <div class="list-channel">
     <div class="list-chan" >
-      <div class="list-title">推荐</div>
+      <div class="list-title" style="margin-top:20px;">推荐</div>
       <el-row name="myrow" :gutter="0">
         <el-col :xs="6"  :sm="6" :md="6" :ls="6" v-for="(item,index) in list.clist" :key="index">
           <el-card class="list-row list-row-c">
@@ -19,7 +19,7 @@
       </el-carousel-item>
     </el-carousel>
     <div class="list-w list-t" >
-      <div class="list-title">热门标签</div>
+      <div class="list-title"><i class="icon-tag"></i>热门标签</div>
       <el-row name="myrow" :gutter="0">
         <el-col :xs="6"  :sm="6" :md="6" :ls="6" v-for="(item,index) in list.tlist" :key="index">
           <el-card class="list-row list-row-t">
@@ -32,7 +32,7 @@
       </el-row>
     </div>
     <div class="list-w list-l" >
-      <div class="list-title">猜你喜欢</div>
+      <div class="list-title"><i class="icon-like"></i>猜你喜欢</div>
       <el-row name="myrow" :gutter="0">
         <el-col :xs="6"  :sm="6" :md="6" :ls="6" v-for="(item,index) in list.llist" :key="index">
           <el-card class="list-row list-row-l">
@@ -113,6 +113,31 @@
       color: #ffffff;
       font-size: 14px;
       margin-bottom: 10px;
+      margin-left:20px;
+      .icon-tag{
+        display:inline-block;
+        width:22px;
+        height:22px;
+        margin-right:10px;
+        background-image:url("../../assets/images/hot-tag.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        /* margin-top: 11px; */
+        position: relative;
+        bottom: -8px;
+      }
+  .icon-like{
+    display:inline-block;
+    width:22px;
+    height:22px;
+    margin-right:10px;
+    background-image:url("../../assets/images/favorite-tag.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* margin-top: 11px; */
+    position: relative;
+    bottom: -8px;
+  }
     }
     .list-row{
       position: relative;

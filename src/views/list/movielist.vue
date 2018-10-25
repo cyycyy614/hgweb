@@ -170,6 +170,8 @@
     margin-bottom: 20px;
     .cat1,.catlist{
       margin: 10px;
+      white-space: nowrap;
+      overflow-x: auto;
     }
     span{
       display: inline-block;

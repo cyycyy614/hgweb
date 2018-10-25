@@ -80,6 +80,14 @@ function getMovieCategoryList_get(opts) {
   });
 }
 
+function getNoticeDetailData_get(opts) {
+  return instance({
+    method: 'get',
+    url:  '/getNoticeDetailData',
+    opts: opts
+  });
+}
+
 
 export {
     swagger_get,
@@ -90,5 +98,6 @@ export {
     getfindmovielist_get,
     getChannelData_get,
     getUserIndexData_get,
-    getMovieCategoryList_get
+    getMovieCategoryList_get,
+    getNoticeDetailData_get
 };
